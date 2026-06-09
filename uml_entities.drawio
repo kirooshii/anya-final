@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="draw.io" modified="2024-01-01T00:00:00.000Z" agent="manual" version="21.0.0" type="device">
+  <diagram id="diag" name="UML Entities">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;general&lt;/b&gt;&#10;──────────&#10;- - __code : int&#10;- - __name : str&#10;──────────&#10;+ + setCode(value)()&#10;+ + setName(value)()&#10;+ + getCode()()&#10;+ + getName()()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="400" y="50" width="180" height="230" as_="geometry" />
+          </mxCell>
+        <mxCell id="3" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;department&lt;/b&gt;&#10;──────────&#10;- - __employees : int&#10;──────────&#10;+ + setEmployees(v)()&#10;+ + getEmployees()()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="100" y="250" width="180" height="164" as_="geometry" />
+          </mxCell>
+        <mxCell id="4" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;expensetype&lt;/b&gt;&#10;──────────&#10;- - __description : str&#10;- - __limit : float&#10;──────────&#10;+ + setDescription(v)()&#10;+ + getDescription()()&#10;+ + setLimit(v)()&#10;+ + getLimit()()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="400" y="250" width="180" height="230" as_="geometry" />
+          </mxCell>
+        <mxCell id="5" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;expense&lt;/b&gt;&#10;──────────&#10;- __expensetype : expensetype&#10;- __department : department&#10;- __amount : float&#10;- __date : str&#10;──────────&#10;+ setExpenseType(v)&#10;+ getExpenseType()&#10;+ getExpenseTypeCode()&#10;+ getExpenseTypeName()&#10;+ setDepartment(v)&#10;+ getDepartment()&#10;+ getDepartmentCode()&#10;+ getDepartmentName()&#10;+ setAmount(v)&#10;+ getAmount()&#10;+ setDate(v)&#10;+ getDate()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="700" y="200" width="210" height="450" as_="geometry" />
+          </mxCell>
+        <mxCell id="6" parent="1" source="3" target="2" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=1;dashed=0;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="7" parent="1" source="4" target="2" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=1;dashed=0;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="8" parent="1" source="5" target="2" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=1;dashed=0;" edge="1">
+          <mxGeometry relative="1" as_="geometry">
+            <Array as_="points" />
+            <mxPoint x="700" y="160" />
+            <mxPoint x="580" y="160" />
+            <mxPoint x="580" y="110" />
+            </mxGeometry>
+          </mxCell>
+        <mxCell id="9" parent="1" source="5" target="3" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;strokeWidth=1;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="10" parent="1" source="5" target="4" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;strokeWidth=1;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        </root>
+      </mxGraphModel>
+    </diagram>
+  </mxfile>

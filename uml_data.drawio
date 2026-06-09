@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="draw.io" modified="2024-01-01T00:00:00.000Z" agent="manual" version="21.0.0" type="device">
+  <diagram id="diag" name="UML Data Layer">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;generalList&lt;/b&gt;&#10;──────────&#10;- - __list : list&#10;──────────&#10;+ + clear()()&#10;+ + findByCode(code)()&#10;+ + getNewCode()()&#10;+ + getCodes()()&#10;+ + getItems()()&#10;+ + appendItem(v)()&#10;+ + removeItem(v)()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="750" y="40" width="200" height="274" as_="geometry" />
+          </mxCell>
+        <mxCell id="3" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;departmentList&lt;/b&gt;&#10;──────────&#10;──────────&#10;+ + appendItem(v)()&#10;+ + createItem(code,name,emp)()&#10;+ + newItem(name,emp)()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="500" y="300" width="200" height="164" as_="geometry" />
+          </mxCell>
+        <mxCell id="4" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;expensetypeList&lt;/b&gt;&#10;──────────&#10;──────────&#10;+ + appendItem(v)()&#10;+ + createItem(code,name,desc,lim)()&#10;+ + newItem(name,desc,lim)()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="750" y="300" width="200" height="164" as_="geometry" />
+          </mxCell>
+        <mxCell id="5" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;expenseList&lt;/b&gt;&#10;──────────&#10;──────────&#10;+ + appendItem(v)()&#10;+ + createItem(...)()&#10;+ + newItem(...)()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="1000" y="300" width="190" height="164" as_="geometry" />
+          </mxCell>
+        <mxCell id="6" parent="1" source="3" target="2" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=1;dashed=0;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="7" parent="1" source="4" target="2" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=1;dashed=0;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="8" parent="1" source="5" target="2" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=1;dashed=0;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="9" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;accounting&lt;/b&gt;&#10;──────────&#10;- __departmentList&#10;- __expensetypeList&#10;- __expenseList&#10;──────────&#10;+ clear()&#10;+ createDepartment(...)&#10;+ newDepartment(...)&#10;+ removeDepartment(code)&#10;+ getDepartment(code)&#10;+ getDepartmentList()&#10;+ getDepartmentCodes()&#10;+ createExpenseType(...)&#10;+ newExpenseType(...)&#10;+ removeExpenseType(code)&#10;+ getExpenseType(code)&#10;+ getExpenseTypeList()&#10;+ getExpenseTypeCodes()&#10;+ createExpense(...)&#10;+ newExpense(...)&#10;+ removeExpense(code)&#10;+ getExpense(code)&#10;+ getExpenseList()&#10;+ getExpenseCodes()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="260" y="200" width="210" height="582" as_="geometry" />
+          </mxCell>
+        <mxCell id="10" parent="1" source="9" target="3" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;strokeWidth=1;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="11" parent="1" source="9" target="4" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;strokeWidth=1;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="12" parent="1" source="9" target="5" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;strokeWidth=1;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="13" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;data&lt;/b&gt;&#10;──────────&#10;- - __lib&#10;- - __inp : str&#10;- - __out : str&#10;──────────&#10;+ + setLib(v)()&#10;+ + setInp(v)()&#10;+ + setOut(v)()&#10;+ + getLib()()&#10;+ + getInp()()&#10;+ + getOut()()&#10;+ + readFile(lib,fn)()&#10;+ + writeFile(lib,fn)()&#10;+ + read()()&#10;+ + write()()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="30" y="470" width="200" height="384" as_="geometry" />
+          </mxCell>
+        <mxCell id="14" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;dataxml&lt;/b&gt;&#10;──────────&#10;──────────&#10;+ + read()()&#10;+ + write()()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="280" y="470" width="180" height="142" as_="geometry" />
+          </mxCell>
+        <mxCell id="15" parent="1" source="14" target="13" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=block;endFill=0;endSize=16;strokeWidth=1;dashed=0;" edge="1">
+          <mxGeometry relative="1" as_="geometry" />
+          </mxCell>
+        <mxCell id="16" parent="1" source="14" target="9" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;endArrow=open;dashed=1;strokeWidth=1;" edge="1" value="использует">
+          <mxGeometry relative="1" as_="geometry">
+            <Array as_="points" />
+            <mxPoint x="370" y="500" />
+            <mxPoint x="370" y="550" />
+            <mxPoint x="470" y="550" />
+            <mxPoint x="470" y="400" />
+            </mxGeometry>
+          </mxCell>
+        <mxCell id="17" parent="1" value="&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&#10;&lt;b&gt;rowCode&lt;/b&gt;&#10;──────────&#10;- - __list : list&#10;──────────&#10;+ + clear()()&#10;+ + appendRowCode(r,c)()&#10;+ + updateRow(r)()&#10;+ + removeRow(r)()&#10;+ + removeCode(c)()&#10;+ + getCode(r)()&#10;+ + getCodes()()&#10;+ + getRow(c)()" style="whiteSpace=wrap;html=1;align=left;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry x="1030" y="470" width="200" height="296" as_="geometry" />
+          </mxCell>
+        </root>
+      </mxGraphModel>
+    </diagram>
+  </mxfile>
