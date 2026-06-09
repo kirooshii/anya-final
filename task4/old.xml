@@ -1,0 +1,25 @@
+<library>
+    <author code="1" surname="Хорн" name="Роджер"/>
+    <author code="2" surname="Джонсон" name="Чарльз"/>
+    <author code="3" surname="Сузи" name="Роман"/>
+    <author code="4" surname="Мякишев" name="Геннадий" secname="Яковлевич"/>
+    <author code="5" surname="Буховцев" name="Борис" secname="Борисович"/>
+
+    <publ code="1" name='Москва "Мир"' shortname="М.: Мир"/>
+    <publ code="2" name='Санкт-Петербург "БХВ-Петербург"' shortname="СПб.: БХВ-Петербург"/>
+    <publ code="3" name='Москва "Просвещение"' shortname="М.: Просвещение"/>
+
+    <book code="1" name='Матричный анализ' img='matrix.jpeg' year='1989' pages='655' publ='1'>
+        <author code='1'/>
+        <author code='2'/>
+    </book>
+
+    <book code="2" name='Python' img='cuzypython.jpeg' year='2002' pages='768' publ='2'>
+        <author code='3'/>
+    </book>
+
+    <book code="3" name='Физика: Учебник для 11 класса средней школы' img='fizika.jpeg' year='1991' pages='254' publ='3'>
+        <author code='4'/>
+        <author code='5'/>
+    </book>
+</library>
