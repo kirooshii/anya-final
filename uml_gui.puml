@@ -1,0 +1,231 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam class {
+    BorderColor #82b366
+    BackgroundColor #d5e8d4
+}
+skinparam package {
+    BorderColor #6c8ebf
+    BackgroundColor #dae8fc
+}
+
+package "Базовые виджеты" {
+
+    class libWidget <<mixin>> {
+        - __library : accounting
+        --
+        + getLibrary() : accounting
+    }
+
+    class dbTableWidget {
+        - __rowCode : rowCode
+        --
+        + setHeader(value)
+        + clearContents()
+        + getCodes() : list
+        + getCurrentCode() : int
+        + setCurrentCode(code)
+        + appendRowCode(row, code)
+        + update(code)
+        + setData()
+    }
+
+    class dbComboBox {
+        - __rowCode : rowCode
+        --
+        + clear()
+        + addItem(code, text)
+        + removeItem(index)
+        + getCurrentCode() : int
+        + setCurrentCode(code)
+        + setCurrentRec(value)
+        + getCurrentRec()
+        + update()
+    }
+
+    class editForm {
+        - __grid : QGridLayout
+        - __vbox : QVBoxLayout
+        - __hbox : QHBoxLayout
+        - __currentCode : int
+        --
+        + addLabel(text, x, y)
+        + addNewWidget(widget, x, y)
+        + addLeftLayout(layout)
+        + setCurrentCode(value)
+        + getCurrentCode() : int
+        + update()
+        + newClick()
+        + editClick()
+        + delClick()
+    }
+
+    class page {
+        - __table : dbTableWidget
+        - __form : editForm
+        - __newButton : QPushButton
+        - __editButton : QPushButton
+        - __delButton : QPushButton
+        --
+        + setTable(value)
+        + setForm(value)
+        + newClick()
+        + editClick()
+        + delClick()
+        + tableClick()
+        + setConnect()
+        + update()
+    }
+}
+
+package "Таблицы" {
+    class departmentsTable {
+        --
+        + setData()
+    }
+    class expensetypesTable {
+        --
+        + setData()
+    }
+    class expensesTable {
+        --
+        + setData()
+    }
+}
+
+package "Комбо-боксы" {
+    class departmentCombo {
+        --
+        + update()
+    }
+    class expensetypeCombo {
+        --
+        + update()
+    }
+}
+
+package "Формы редактирования" {
+    class departmentEditForm {
+        - __nameEdit : QLineEdit
+        - __employeesSpin : QSpinBox
+        --
+        + update()
+        + newClick()
+        + editClick()
+        + delClick()
+    }
+    class expensetypeEditForm {
+        - __nameEdit : QLineEdit
+        - __descriptionEdit : QLineEdit
+        - __limitSpin : QDoubleSpinBox
+        --
+        + update()
+        + newClick()
+        + editClick()
+        + delClick()
+    }
+    class expenseEditForm {
+        - __expensetypeCombo : expensetypeCombo
+        - __departmentCombo : departmentCombo
+        - __amountSpin : QDoubleSpinBox
+        - __dateEdit : QDateEdit
+        --
+        + update()
+        + newClick()
+        + editClick()
+        + delClick()
+    }
+}
+
+package "Страницы" {
+    class departmentPage {
+        --
+        + setTable()
+        + setForm()
+        + setConnect()
+    }
+    class expensetypePage {
+        --
+        + setTable()
+        + setForm()
+        + setConnect()
+    }
+    class expensePage {
+        --
+        + setTable()
+        + setForm()
+        + setConnect()
+    }
+}
+
+package "Главное окно" {
+    class tabWidget {
+        - __departmentPage : departmentPage
+        - __expensetypePage : expensetypePage
+        - __expensePage : expensePage
+        --
+        + update()
+    }
+    class mainWindow {
+        - __accounting : accounting
+        - dataxml : dataxml
+        - tabWidget : tabWidget
+        - new : QAction
+        - openxml : QAction
+        - savexml : QAction
+        --
+        + newAction()
+        + openXMLAction()
+        + saveXMLAction()
+    }
+}
+
+' Наследования
+QTableWidget <|-- dbTableWidget
+QComboBox <|-- dbComboBox
+QWidget <|-- editForm
+QWidget <|-- page
+QTabWidget <|-- tabWidget
+QMainWindow <|-- mainWindow
+
+dbTableWidget <|-- departmentsTable
+dbTableWidget <|-- expensetypesTable
+dbTableWidget <|-- expensesTable
+
+dbComboBox <|-- departmentCombo
+dbComboBox <|-- expensetypeCombo
+
+editForm <|-- departmentEditForm
+editForm <|-- expensetypeEditForm
+editForm <|-- expenseEditForm
+
+page <|-- departmentPage
+page <|-- expensetypePage
+page <|-- expensePage
+
+' Примеси
+dbTableWidget ..|> libWidget
+dbComboBox ..|> libWidget
+editForm ..|> libWidget
+page ..|> libWidget
+
+' Композиции
+departmentPage *-- departmentsTable
+departmentPage *-- departmentEditForm
+expensetypePage *-- expensetypesTable
+expensetypePage *-- expensetypeEditForm
+expensePage *-- expensesTable
+expensePage *-- expenseEditForm
+
+expenseEditForm --> departmentCombo : использует
+expenseEditForm --> expensetypeCombo : использует
+
+tabWidget *-- departmentPage
+tabWidget *-- expensetypePage
+tabWidget *-- expensePage
+
+mainWindow *-- tabWidget
+mainWindow --> accounting : управляет
+mainWindow --> dataxml : сохраняет/загружает
+
+@enduml

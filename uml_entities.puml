@@ -1,0 +1,70 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam class {
+    BorderColor #82b366
+    BackgroundColor #d5e8d4
+}
+skinparam packageStyle rectangle
+
+class general {
+    - __code : int
+    - __name : str
+    --
+    + setCode(value)
+    + setName(value)
+    + getCode() : int
+    + getName() : str
+}
+
+class department {
+    - __employees : int
+    --
+    + setEmployees(value)
+    + getEmployees() : int
+}
+
+class expensetype {
+    - __description : str
+    - __limit : float
+    --
+    + setDescription(value)
+    + getDescription() : str
+    + setLimit(value)
+    + getLimit() : float
+}
+
+class expense {
+    - __expensetype : expensetype
+    - __department : department
+    - __amount : float
+    - __date : str
+    --
+    + setExpenseType(value)
+    + getExpenseType() : expensetype
+    + getExpenseTypeCode() : int
+    + getExpenseTypeName() : str
+    + setDepartment(value)
+    + getDepartment() : department
+    + getDepartmentCode() : int
+    + getDepartmentName() : str
+    + setAmount(value)
+    + getAmount() : float
+    + setDate(value)
+    + getDate() : str
+}
+
+general <|-- department
+general <|-- expensetype
+general <|-- expense
+
+expense o-- department : агрегация
+expense o-- expensetype : агрегация
+
+note bottom of expense
+  Расход связывает Вид расхода
+  и Отдел через агрегацию.
+  Все три сущности наследуют
+  code и name от general.
+end note
+
+@enduml

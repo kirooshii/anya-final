@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.10)  10 JUN 2026 00:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.10)  10 JUN 2026 01:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,19 +715,25 @@ Package hyperref Info: Link coloring OFF on input line 98.
  [1
 
 {/usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (.
-/report.toc)
-\tf@toc=\write4
-\openout4 = `report.toc'.
+/report.toc
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
+5.
 
-
+(/usr/local/texlive/2026basic/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.132 \newpage
-               [1
+l.45 ...tt {mainwindow.py}}{23}{subsection.4.1.11}
+                                                  % [1
 
-]
+])
+\tf@toc=\write4
+\openout4 = `report.toc'.
+
+ [2]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 
 Overfull \hbox (56.60739pt too wide) in paragraph at lines 137--138
@@ -747,168 +753,151 @@ Overfull \hbox (11.10248pt too wide) in paragraph at lines 146--147
  слой дан-ных (классы-
  []
 
-[2
+[3
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-152.
-(/usr/local/texlive/2026basic/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
 LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <17.28> not available
 (Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 154.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 158.
-
 (./general.py
 LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 1.
-) (./department.py [3
+) (./department.py [4
 
-]) (./expensetype.py) (./expense.py [4])
+]) (./expensetype.py) (./expense.py [5])
+<screenshots/uml_entities.png, id=306, 672.5125pt x 761.84625pt>
+File: screenshots/uml_entities.png Graphic file (type png)
+<use screenshots/uml_entities.png>
+Package pdftex.def Info: screenshots/uml_entities.png  used on input line 184.
+(pdftex.def)             Requested size: 411.14528pt x 465.76015pt.
 
-LaTeX Warning: Reference `fig:uml1' on page 5 undefined on input line 180.
-
-[5]
+[6] [7 <./screenshots/uml_entities.png>]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
 
-Overfull \hbox (24.34196pt too wide) in paragraph at lines 197--198
+Overfull \hbox (24.34196pt too wide) in paragraph at lines 196--197
 []\T2A/cmr/bx/n/14.4 Специализированные спис-ки: \T2A/cmr/m/n/14.4 Для каж-дой 
 сущ-но-сти со-зда-ют-ся классы-
  []
 
 
-Overfull \hbox (36.391pt too wide) in paragraph at lines 199--200
+Overfull \hbox (36.391pt too wide) in paragraph at lines 198--199
 \T2A/cmr/m/n/14.4 кон-крет-ную ло-ги-ку чте-ния и за-пи-си XML че-рез биб-лио-т
 е-ку \T2A/cmtt/m/n/14.4 xml.dom.minidom\T2A/cmr/m/n/14.4 . 
  []
 
-(./generallist.py [6
+(./generallist.py [8
 
 ])
-Overfull \hbox (48.7343pt too wide) in paragraph at lines 210--211
+Overfull \hbox (48.7343pt too wide) in paragraph at lines 209--210
 \T2A/cmr/m/n/14.4 Класс для управ-ле-ния кол-лек-ци-ей объ-ек-тов \T2A/cmtt/m/n
 /14.4 department\T2A/cmr/m/n/14.4 . Пе-ре-опре-де-ля-ет \T2A/cmtt/m/n/14.4 appe
 ndItem
  []
 
-(./departmentlist.py) (./expensetypelist.py) [7] (./expenselist.py)
-Overfull \hbox (10.99763pt too wide) in paragraph at lines 228--229
+(./departmentlist.py) (./expensetypelist.py) [9] (./expenselist.py)
+Overfull \hbox (10.99763pt too wide) in paragraph at lines 227--228
 \T2A/cmr/m/n/14.4 управ-ля-ю-щий класс (\T2A/cmtt/m/n/14.4 lib\T2A/cmr/m/n/14.4
  ) и име-на вход-но-го/выходного фай-лов. Ме-то-ды \T2A/cmtt/m/n/14.4 read()
  []
 
-(./data.py [8]) (./dataxml.py [9]) (./accounting.py [10]) (./rowcode.py
-[11]) (/usr/local/texlive/2026basic/texmf-dist/tex/latex/listings/lstlang1.sty
+(./data.py [10]) (./dataxml.py [11]) (./accounting.py [12]) (./rowcode.py
+[13]) (/usr/local/texlive/2026basic/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (/usr/local/texlive/2026basic/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (./data.xml)
-
-LaTeX Warning: Reference `fig:uml2' on page 12 undefined on input line 256.
-
-[12]
+<screenshots/uml_data.png, id=582, 1963.335pt x 1145.27875pt>
+File: screenshots/uml_data.png Graphic file (type png)
+<use screenshots/uml_data.png>
+Package pdftex.def Info: screenshots/uml_data.png  used on input line 259.
+(pdftex.def)             Requested size: 435.32422pt x 253.93683pt.
+ [14] [15 <./screenshots/uml_data.png (PNG copy)>]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
 
-Overfull \hbox (7.61958pt too wide) in paragraph at lines 276--277
+Overfull \hbox (7.61958pt too wide) in paragraph at lines 274--275
 []\T2A/cmr/bx/n/14.4 Главное ок-но: \T2A/cmtt/m/n/14.4 tabWidget \T2A/cmr/m/n/1
 4.4 объ-еди-ня-ет стра-ни-цы во вклад-ки; \T2A/cmtt/m/n/14.4 mainWindow
  []
 
-[13
+[16
 
 ] (./libwidget.py)
-Overfull \hbox (52.02692pt too wide) in paragraph at lines 287--288
+Overfull \hbox (52.02692pt too wide) in paragraph at lines 285--286
 \T2A/cmr/m/n/14.4 дек-сов на ко-ды объ-ек-тов. Под-дер-жи-ва-ет ме-то-ды \T2A/c
 mtt/m/n/14.4 getCurrentCode()\T2A/cmr/m/n/14.4 , \T2A/cmtt/m/n/14.4 setCurrentR
 ec()
  []
 
-(./dbcombobox.py) (./dbtablewidget.py [14])
-Overfull \hbox (45.73488pt too wide) in paragraph at lines 299--300
+(./dbcombobox.py) (./dbtablewidget.py [17])
+Overfull \hbox (45.73488pt too wide) in paragraph at lines 297--298
 \T2A/cmr/m/n/14.4 е-ния ин-тер-фей-са, а так-же шаб-лон-ные ме-то-ды \T2A/cmtt/
 m/n/14.4 newClick()\T2A/cmr/m/n/14.4 , \T2A/cmtt/m/n/14.4 editClick()\T2A/cmr/m
 /n/14.4 , \T2A/cmtt/m/n/14.4 delClick()\T2A/cmr/m/n/14.4 ,
  []
 
-(./editform.py [15]) (./page.py) [16]
+(./editform.py [18]) (./page.py) [19]
 LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 313.
+(Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 311.
  (./departmentstable.py)
-(./expensetypestable.py) (./expensestable.py [17]) (./departmentcombo.py)
-(./expensetypecombo.py [18]) (./departmenteditform.py)
-(./expensetypeeditform.py [19])
-Overfull \hbox (3.89154pt too wide) in paragraph at lines 351--352
+(./expensetypestable.py) (./expensestable.py [20]) (./departmentcombo.py)
+(./expensetypecombo.py [21]) (./departmenteditform.py)
+(./expensetypeeditform.py [22])
+Overfull \hbox (3.89154pt too wide) in paragraph at lines 349--350
 \T2A/cmr/m/n/14.4 Форма ре-дак-ти-ро-ва-ния рас-хо-да со-дер-жит два комбо-бокс
 а (\T2A/cmtt/m/n/14.4 expensetypeCombo
  []
 
-(./expenseeditform.py [20]) (./departmentpage.py [21]) (./expensetypepage.py)
-(./expensepage.py) (./tabwidget.py [22]) (./mainwindow.py [23]) (./main.pyw)
+(./expenseeditform.py [23]) (./departmentpage.py [24]) (./expensetypepage.py)
+(./expensepage.py) (./tabwidget.py [25]) (./mainwindow.py [26]) (./main.pyw)
+<screenshots/uml_gui.png, id=1075, 1758.57pt x 1329.96875pt>
+File: screenshots/uml_gui.png Graphic file (type png)
+<use screenshots/uml_gui.png>
+Package pdftex.def Info: screenshots/uml_gui.png  used on input line 391.
+(pdftex.def)             Requested size: 483.69687pt x 365.79327pt.
 
-LaTeX Warning: Reference `fig:uml3' on page 24 undefined on input line 389.
-
-<screenshots/screenshot_departments.png, id=899, 792.9625pt x 438.63875pt>
+[27]
+<screenshots/screenshot_departments.png, id=1106, 792.9625pt x 438.63875pt>
 File: screenshots/screenshot_departments.png Graphic file (type png)
 <use screenshots/screenshot_departments.png>
 Package pdftex.def Info: screenshots/screenshot_departments.png  used on input 
-line 408.
+line 404.
 (pdftex.def)             Requested size: 483.69687pt x 267.56923pt.
-[24]
-
-LaTeX Warning: Reference `fig:scr_depts' on page 25 undefined on input line 413
-.
-
-<screenshots/screenshot_expensetypes.png, id=935, 793.96625pt x 446.66875pt>
+ [28 <./screenshots/uml_gui.png (PNG copy)>]
+<screenshots/screenshot_expensetypes.png, id=1113, 793.96625pt x 446.66875pt>
 File: screenshots/screenshot_expensetypes.png Graphic file (type png)
 <use screenshots/screenshot_expensetypes.png>
 Package pdftex.def Info: screenshots/screenshot_expensetypes.png  used on input
- line 420.
+ line 415.
 (pdftex.def)             Requested size: 483.69687pt x 272.12675pt.
-[25 <./screenshots/screenshot_departments.png>]
-
-LaTeX Warning: Reference `fig:scr_types' on page 26 undefined on input line 425
-.
-
-<screenshots/screenshot_expenses.png, id=943, 794.97pt x 484.81125pt>
+ [29 <./screenshots/screenshot_departments.png>]
+<screenshots/screenshot_expenses.png, id=1122, 794.97pt x 484.81125pt>
 File: screenshots/screenshot_expenses.png Graphic file (type png)
 <use screenshots/screenshot_expenses.png>
 Package pdftex.def Info: screenshots/screenshot_expenses.png  used on input lin
-e 432.
+e 426.
 (pdftex.def)             Requested size: 483.69687pt x 294.98726pt.
-[26 <./screenshots/screenshot_expensetypes.png>]
-
-LaTeX Warning: Reference `fig:scr_expenses' on page 27 undefined on input line 
-437.
-
-<screenshots/screenshot_open_xml.png, id=951, 641.39626pt x 190.7125pt>
+ [30 <./screenshots/screenshot_expensetypes.png>]
+<screenshots/screenshot_open_xml.png, id=1131, 641.39626pt x 190.7125pt>
 File: screenshots/screenshot_open_xml.png Graphic file (type png)
 <use screenshots/screenshot_open_xml.png>
 Package pdftex.def Info: screenshots/screenshot_open_xml.png  used on input lin
-e 444.
+e 437.
 (pdftex.def)             Requested size: 483.69687pt x 143.82553pt.
-
-LaTeX Warning: Reference `fig:scr_open' on page 27 undefined on input line 449.
-
-
-[27 <./screenshots/screenshot_expenses.png> <./screenshots/screenshot_open_xml.
-png>]
-<screenshots/screenshot_save_xml.png, id=962, 1033.8625pt x 269.005pt>
+ [31 <./screenshots/screenshot_expenses.png> <./screenshots/screenshot_open_xml
+.png>]
+<screenshots/screenshot_save_xml.png, id=1141, 1033.8625pt x 269.005pt>
 File: screenshots/screenshot_save_xml.png Graphic file (type png)
 <use screenshots/screenshot_save_xml.png>
 Package pdftex.def Info: screenshots/screenshot_save_xml.png  used on input lin
-e 456.
+e 448.
 (pdftex.def)             Requested size: 483.69687pt x 125.85359pt.
 
-
-LaTeX Warning: Reference `fig:scr_save' on page 28 undefined on input line 461.
-
-
-[28 <./screenshots/screenshot_save_xml.png>]
+[32 <./screenshots/screenshot_save_xml.png>]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
-[29
+[33
 
 ] (./report.aux)
  ***********
@@ -917,36 +906,27 @@ L3 programming layer <2026-01-19>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 9114FD04489E9015A687228D7F1132E4;1466
-(rerunfilecheck)             After:  1B280CB37A8AB91F4436D02CB189B522;9290.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 1B280CB37A8AB91F4436D02CB189B522;9290.
  ) 
 Here is how much of TeX's memory you used:
- 17072 strings out of 468477
- 267815 string characters out of 5445368
+ 17138 strings out of 468477
+ 269170 string characters out of 5445368
  1228214 words of memory out of 5000000
- 44690 multiletter control sequences out of 15000+600000
- 640651 words of font info for 59 fonts, out of 8000000 for 9000
+ 44750 multiletter control sequences out of 15000+600000
+ 641717 words of font info for 63 fonts, out of 8000000 for 9000
  735 hyphenation exceptions out of 8191
- 75i,6n,79p,886b,2125s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,788b,2125s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/kir/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/lhcyr/lh-t2a
 /latt1000.600pk> </usr/local/texlive/2026basic/texmf-dist/fonts/pk/ljfour/lh/lh
 -t2a/larm0600.600pk> </Users/kir/Library/texlive/2026basic/texmf-var/fonts/pk/l
 jfour/lh/lh-t2a/latt1728.600pk> </Users/kir/Library/texlive/2026basic/texmf-var
-/fonts/pk/ljfour/lh/lh-t2a/latt1440.600pk> </Users/kir/Library/texlive/2026basi
-c/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </Users/kir/Library/texli
-ve/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk> </Users/kir/
-Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2986.600pk> <
+/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk> </Users/kir/Library/texlive/2026ba
+sic/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2986.600pk> </Users/kir/Library/tex
+live/2026basic/texmf-var/fonts/pk/ljfour/lh/lh-t2a/latt1440.600pk> </Users/kir/
+Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> <
 /Users/kir/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx35
 83.600pk> </Users/kir/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/lh/lh
 -t2a/larm1440.600pk> </Users/kir/Library/texlive/2026basic/texmf-var/fonts/pk/l
@@ -955,10 +935,10 @@ jfour/lh/lh-t2a/labx2488.600pk> </Users/kir/Library/texlive/2026basic/texmf-var
 c/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.600pk> </usr/local/texlive/2026b
 asic/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </usr/local/texlive/2
 026basic/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/larm1728.600pk>
-Output written on report.pdf (30 pages, 826395 bytes).
+Output written on report.pdf (34 pages, 1250919 bytes).
 PDF statistics:
- 1729 PDF objects out of 2073 (max. 8388607)
- 1137 compressed objects within 12 object streams
- 823 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1920 PDF objects out of 2073 (max. 8388607)
+ 1305 compressed objects within 14 object streams
+ 827 named destinations out of 1000 (max. 500000)
+ 377 words of extra memory for PDF output out of 10000 (max. 10000000)
 

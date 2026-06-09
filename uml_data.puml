@@ -1,0 +1,138 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam class {
+    BorderColor #82b366
+    BackgroundColor #d5e8d4
+}
+skinparam package {
+    BorderColor #6c8ebf
+    BackgroundColor #dae8fc
+}
+skinparam note {
+    BorderColor #d6b656
+    BackgroundColor #fff2cc
+}
+
+package "Слой данных" {
+
+    class generalList {
+        - __list : list
+        --
+        + clear()
+        + findByCode(code)
+        + getNewCode() : int
+        + getCodes() : list
+        + getItems() : list
+        + appendItem(value)
+        + removeItem(value)
+    }
+
+    class departmentList {
+        --
+        + appendItem(value)
+        + createItem(code, name, employees) : department
+        + newItem(name, employees) : department
+    }
+
+    class expensetypeList {
+        --
+        + appendItem(value)
+        + createItem(code, name, desc, limit) : expensetype
+        + newItem(name, desc, limit) : expensetype
+    }
+
+    class expenseList {
+        --
+        + appendItem(value)
+        + createItem(code, name, exptype, dept, amount, date) : expense
+        + newItem(name, exptype, dept, amount, date) : expense
+    }
+
+    class rowCode {
+        - __list : list
+        --
+        + clear()
+        + appendRowCode(row, code)
+        + updateRow(row)
+        + removeRow(row)
+        + removeCode(code)
+        + getCode(row) : int
+        + getCodes() : list
+        + getRow(code) : int
+    }
+
+    generalList <|-- departmentList
+    generalList <|-- expensetypeList
+    generalList <|-- expenseList
+}
+
+package "Управляющий класс" {
+    class accounting {
+        - __departmentList : departmentList
+        - __expensetypeList : expensetypeList
+        - __expenseList : expenseList
+        --
+        + clear()
+        + createDepartment(code, name, employees) : department
+        + newDepartment(name, employees) : department
+        + removeDepartment(code)
+        + getDepartment(code) : department
+        + getDepartmentList() : list
+        + getDepartmentCodes() : list
+        + createExpenseType(code, name, desc, limit) : expensetype
+        + newExpenseType(name, desc, limit) : expensetype
+        + removeExpenseType(code)
+        + getExpenseType(code) : expensetype
+        + getExpenseTypeList() : list
+        + getExpenseTypeCodes() : list
+        + createExpense(...) : expense
+        + newExpense(...) : expense
+        + removeExpense(code)
+        + getExpense(code) : expense
+        + getExpenseList() : list
+        + getExpenseCodes() : list
+    }
+}
+
+package "Сериализация" {
+    class data {
+        - __lib : accounting
+        - __inp : str
+        - __out : str
+        --
+        + setLib(value)
+        + setInp(value)
+        + setOut(value)
+        + getLib() : accounting
+        + getInp() : str
+        + getOut() : str
+        + readFile(lib, filename)
+        + writeFile(lib, filename)
+        + read()
+        + write()
+    }
+
+    class dataxml {
+        --
+        + read()
+        + write()
+    }
+
+    data <|-- dataxml
+}
+
+accounting o-- departmentList
+accounting o-- expensetypeList
+accounting o-- expenseList
+
+dataxml --> accounting : читает/пишет
+
+note right of dataxml
+  read(): парсит XML, создаёт
+  объекты через accounting,
+  восстанавливает связи по кодам.
+  write(): сериализует все
+  объекты в XML с отступами.
+end note
+
+@enduml
